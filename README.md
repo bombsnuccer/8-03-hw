@@ -10,6 +10,8 @@
 
 В качестве ответа в репозиторий шаблона с решением добавьте скриншоты с настройками раннера в проекте.
 
+Ответ:
+
 ![Регистрация Runner](runner.png)
 
 
@@ -18,6 +20,29 @@
 ### Задание 2
 Настроен CI/CD пайплайн для сборки Go-приложения. Файл `.gitlab-ci.yml` добавлен в репозиторий. Пайплайн успешно проходит стадии сборки и тестирования.
 
+Ответ:
+### Текст файла .gitlab-ci.yml
+
+```yaml
+stages:
+  - test
+  - build
+
+test_project:
+  stage: test
+  image: golang:1.17
+  script:
+    - go test ./...
+
+build_project:
+  stage: build
+  image: golang:1.17
+  script:
+    - go build -o myapp
+  artifacts:
+    paths:
+      - myapp
+```
+
 ![Результат Pipeline](pipeline.png)
-
-
+![Результат Pipeline2](pipeline2.png)
