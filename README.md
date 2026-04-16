@@ -29,6 +29,7 @@
 Ответ:
 
 ![Результат Pipeline](pipeline.png)
+![Результат Pipeline2](pipeline2.png)
 
 ### Текст файла .gitlab-ci.yml
 
